@@ -30,7 +30,7 @@ Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.exe`** to 
 
 ## 🖥️ Using the App
 
-![App Main Window](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/main_window.png)
+![App Main Window](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/main_window.jpg)
 
 ### 1. Enter Your Credentials
 
@@ -59,7 +59,7 @@ To choose a different location, click **Browse…** and select a folder and file
 
 Click **Start Scan**. The console at the bottom of the window will show live progress — which pages are being scanned, how many orders were checked, and what was found.
 
-![Console Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/console_output.png)
+![Console Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/console_output.jpg)
 
 When finished, a popup will confirm success and show you where the Excel file was saved.
 
