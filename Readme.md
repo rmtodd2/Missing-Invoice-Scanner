@@ -16,9 +16,9 @@ Click the file `Find_Uninvoiced_Parts_v2.zip` in the file list above and click *
 
 ### Step 2 — Extract the ZIP
 
-1. Find the downloaded file in your **Downloads** folder.
+1. Find the downloaded file on your computer.
 2. Right-click the ZIP file and choose **Extract All…**
-3. Pick a location (your Desktop works fine) and click **Extract**.
+3. Pick a location and click **Extract**.
 
 ### Step 3 — Run the App
 
