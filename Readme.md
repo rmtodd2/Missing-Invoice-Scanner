@@ -97,7 +97,7 @@ Every tracked, uninvoiced line item with full detail:
 | Tracking | Tracking number(s) |
 | Ship Date | Date the item shipped |
 | Ship Via | Shipping carrier |
-| Location | Warehouse location codes |
+| Location | Warehouse location code |
 
 
 ---
