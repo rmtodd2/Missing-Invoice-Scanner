@@ -12,7 +12,7 @@ A Windows desktop application that scans your submitted Parts Unlimited orders a
 
 Click the green **Code** button at the top of this page, then click **Download ZIP** — or click the file `Find_Uninvoiced_Parts_v2.zip` in the file list above and click **Download**.
 
-![Download ZIP](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/download.png)
+![Download ZIP](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/download.jpg)
 
 ### Step 2 — Extract the ZIP
 
