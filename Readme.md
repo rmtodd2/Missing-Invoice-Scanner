@@ -1,112 +1,134 @@
 # Tracked Uninvoiced Parts Scanner
 
-This application scans submitted orders and identifies parts that have been **shipped with tracking but not yet invoiced**. Results are exported to an Excel file for easy review.
+A Windows desktop application that scans your submitted Parts Unlimited orders and identifies parts that have been **shipped with a tracking number but not yet invoiced**. Results are exported directly to an Excel workbook for easy review.
 
 ---
 
-## Getting Started
+## 📥 Download & Install (Windows)
 
-1. Launch the application  
-2. Enter your login credentials  
-3. Select your date range  
-4. Choose where to save the output file  
-5. Click **Start Scan**
+> **No coding or technical knowledge required.** Just download, extract, and run.
 
----
+### Step 1 — Download the ZIP
 
-## Input Fields
+Click the green **Code** button at the top of this page, then click **Download ZIP** — or click the file `Find_Uninvoiced_Parts_v2.zip` in the file list above and click **Download**.
 
-### Dealer #
-Enter your dealer code provided by Parts Unlimited.
+![Download ZIP](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/download.png)
 
----
+### Step 2 — Extract the ZIP
 
-### User ID
-Your login username.
+1. Find the downloaded file in your **Downloads** folder.
+2. Right-click the ZIP file and choose **Extract All…**
+3. Pick a location (your Desktop works fine) and click **Extract**.
 
----
+### Step 3 — Run the App
 
-### Password
-Your login password.
+Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.exe`** to launch the app.
+
+> **Windows SmartScreen warning?** If Windows shows a blue "Windows protected your PC" popup, click **More info**, then click **Run anyway**. This is normal for unsigned apps.
 
 ---
 
-### Oldest Date to Search
-The earliest date you want to include in the scan.
+## 🖥️ Using the App
+
+![App Main Window](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/main_window.png)
+
+### 1. Enter Your Credentials
+
+| Field | What to enter |
+|---|---|
+| **Dealer #** | Your dealer code from Parts Unlimited |
+| **User ID** | Your Parts Unlimited login username |
+| **Password** | Your Parts Unlimited login password |
+
+### 2. Set Your Date Range
+
+- **Oldest Date to Search** — The earliest order date you want to check (defaults to 7 days ago).
+- **Newest Date to Search** — The most recent order date to include (defaults to today).
+
+The app will only scan orders submitted **within this date range**.
+
+![Date Range](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/date_range.png)
+
+### 3. Choose Where to Save the Output
+
+The **Output File** field shows where your Excel report will be saved. The default saves a file called `tracked_uninvoiced_parts.xlsx` in the same folder as the app.
+
+To choose a different location, click **Browse…** and select a folder and filename.
+
+### 4. Start the Scan
+
+Click **Start Scan**. The console at the bottom of the window will show live progress — which pages are being scanned, how many orders were checked, and what was found.
+
+![Console Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/console_output.png)
+
+When finished, a popup will confirm success and show you where the Excel file was saved.
 
 ---
 
-### Newest Date to Search
-The most recent date you want to include in the scan.
+## 📊 Understanding the Output
 
-The app will only scan orders **within this date range**.
+The generated Excel file has **two sheets**:
 
----
+### Sheet 1 — Summary
 
-### Output File
-Choose where the Excel file will be saved.
+A simple list of every order that has at least one tracked-but-uninvoiced part:
 
-- Click **Browse** to select a location  
-- The file will be created automatically after the scan completes  
+| Column | Description |
+|---|---|
+| Dealer # | Your dealer code |
+| Order Number | The Parts Unlimited order number |
 
----
+Duplicate orders are automatically removed.
 
-## Output
+### Sheet 2 — Full Output
 
-The generated Excel file contains two sheets:
+Every tracked, uninvoiced line item with full detail:
 
-### Summary
-- Dealer #
-- Order Number  
-- Duplicate orders removed  
+| Column | Description |
+|---|---|
+| Dealer # | Your dealer code |
+| Order Number | Order number |
+| Order Status | Current status of the order |
+| Submitted Date | Date the order was placed |
+| Part | Part number (formatted) |
+| Description | Part description |
+| Brand | Part brand |
+| Line Status | Status of the specific line item |
+| Quantity | Qty originally ordered |
+| Shipped | Qty that has shipped |
+| Invoiced | Qty that has been invoiced |
+| Tracking | Tracking number(s) |
+| Ship Date | Date the item shipped |
+| Ship Via | Shipping carrier |
+| Location | Warehouse location code |
 
----
-
-### Full Output
-Detailed results including:
-- Order information  
-- Part numbers  
-- Tracking numbers  
-- Quantities shipped vs invoiced  
-
----
-
-## Console Output
-
-The console window shows:
-- Scan progress  
-- Pages being processed  
-- Final results summary  
+![Excel Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/excel_output.png)
 
 ---
 
-## Advanced Settings (Leave as Default)
+## ⚙️ Advanced Settings
 
-These settings control how the app communicates with the server.  
-**Most users should NOT change these.**
+> **Most users should leave these at their default values.** These control how the app talks to the Parts Unlimited server.
 
----
-
-### Request Delay (sec)
-- Default: `0.35`
-- Adds a delay between requests to avoid overloading the server  
-
----
-
-### Retry Backoff (sec)
-- Default: `2.0`
-- Time to wait before retrying failed requests  
+| Setting | Default | What it does |
+|---|---|---|
+| Request Delay (sec) | `0.35` | Pause between each request to avoid overloading the server |
+| Retry Backoff (sec) | `2.0` | How long to wait before retrying a failed request |
+| Rate Limit Max Requests | `900` | Max requests allowed within the time window |
+| Rate Limit Window (sec) | `300` | The rolling time window (in seconds) for rate limiting |
 
 ---
 
-### Rate Limit Max Requests
-- Default: `900`
-- Maximum number of requests allowed within the time window  
+## ❓ Troubleshooting
 
----
+**"Access Denied, This user is not authorized to use this app."**
+Your account is not on the authorized users list. Contact the app administrator to be added.
 
-### Rate Limit Window (sec)
-- Default: `300`
-- Time window used for rate limiting  
+**The scan runs but finds nothing**
+All shipped orders in your date range have been fully invoiced — that's a good thing! Try widening your date range if you expected to find something.
 
----
+**The app won't open / crashes immediately**
+Make sure you extracted the ZIP before running the `.exe`. Running directly from inside the ZIP file will not work.
+
+**Windows says the file is dangerous**
+This is a SmartScreen warning for unsigned software. Click **More info → Run anyway** to proceed.
