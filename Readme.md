@@ -30,7 +30,6 @@ Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.exe`** to 
 
 ## 🖥️ Using the App
 
-![App Main Window](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/main_window.jpg)
 
 ### 1. Enter Your Credentials
 
@@ -47,7 +46,6 @@ Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.exe`** to 
 
 The app will only scan orders submitted **within this date range**.
 
-![Date Range](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/date_range.png)
 
 ### 3. Choose Where to Save the Output
 
@@ -59,7 +57,6 @@ To choose a different location, click **Browse…** and select a folder and file
 
 Click **Start Scan**. The console at the bottom of the window will show live progress — which pages are being scanned, how many orders were checked, and what was found.
 
-![Console Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/console_output.jpg)
 
 When finished, a popup will confirm success and show you where the Excel file was saved.
 
@@ -102,7 +99,6 @@ Every tracked, uninvoiced line item with full detail:
 | Ship Via | Shipping carrier |
 | Location | Warehouse location code |
 
-![Excel Output](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/excel_output.png)
 
 ---
 
