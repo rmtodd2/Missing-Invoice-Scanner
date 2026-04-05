@@ -22,7 +22,7 @@ Click the file `Find_Uninvoiced_Parts_v2.1.zip` in the file list above and click
 
 ### Step 3 — Run the App
 
-Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.exe`** to launch the app.
+Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.1.exe`** to launch the app.
 
 **Windows SmartScreen warning?** If Windows shows a blue "Windows protected your PC" popup, click **More info**, then click **Run anyway**. This is normal for unsigned apps.
 
