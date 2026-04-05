@@ -1,10 +1,10 @@
 # Tracked Uninvoiced Parts Scanner
 
-A Windows desktop application that scans your submitted Parts Unlimited orders and identifies parts that have been **shipped with a tracking number but not yet invoiced**. Results are exported directly to an Excel workbook for easy review.
+A desktop application that scans your submitted Parts Unlimited orders and identifies parts that have been **shipped with a tracking number but not yet invoiced**. Results are exported directly to an Excel workbook for easy review.
 
 ---
 
-## 📥 Download & Install (Windows)
+## Download & Install (Windows)
 
 > **No coding or technical knowledge required.** Just download, extract, and run.
 
@@ -25,6 +25,50 @@ Click the file `Find_Uninvoiced_Parts_v2.1.zip` in the file list above and click
 Inside the extracted folder, double-click **`Find_Uninvoiced_Parts_v2.1.exe`** to launch the app.
 
 **Windows SmartScreen warning?** If Windows shows a blue "Windows protected your PC" popup, click **More info**, then click **Run anyway**. This is normal for unsigned apps.
+
+---
+
+## Download & Install (MacOS)
+
+### Step 1 — Download the ZIP
+
+Click the file `Find_Uninvoiced_Parts_v2.1(Mac).zip` in the file list above and click **Download**.
+
+![Download ZIP](https://raw.githubusercontent.com/rmtodd2/Missing-Invoice-Scanner/master/images/download1.jpg)
+
+### Step 2 — Extract the ZIP
+
+1. Locate the downloaded `.zip` file  
+2. Double-click it to extract  
+
+### Step 3 — Run the App
+
+1. Open the extracted folder  
+2. Double-click the **`.app`** file  
+
+---
+
+### Mac Security Warning
+
+MacOS may show a message like:
+
+> “This app can’t be opened because it is from an unidentified developer.”
+
+To open the app:
+
+1. Right-click the `.app` file  
+2. Click **Open**  
+3. Click **Open** again in the popup  
+
+---
+
+### Important (Mac Only)
+
+Mac users **must choose a save location** for the output file.
+
+Click **Browse…** and select a folder (such as Desktop or Documents)
+
+If you do not do this, you may get a **permission error** when the app tries to save the Excel file.
 
 ---
 
@@ -49,9 +93,10 @@ The app will only scan orders submitted **within this date range**.
 
 ### 3. Choose Where to Save the Output
 
-The **Output File** field shows where your Excel report will be saved. The default saves a file called `tracked_uninvoiced_parts.xlsx` in the same folder as the app.
+The **Output File** field shows where your Excel report will be saved.
 
-To choose a different location, click **Browse…** and select a folder and filename.
+- On **Windows**, the default location works fine  
+- On **Mac**, you should always click **Browse…** and select a location manually  
 
 ### 4. Start the Scan
 
@@ -62,7 +107,7 @@ When finished, a popup will confirm success and show you where the Excel file wa
 
 ---
 
-## 📊 Understanding the Output
+## Understanding the Output
 
 The generated Excel file has **two sheets**:
 
@@ -99,10 +144,9 @@ Every tracked, uninvoiced line item with full detail:
 | Ship Via | Shipping carrier |
 | Location | Warehouse location code |
 
-
 ---
 
-## ⚙️ Advanced Settings
+## Advanced Settings
 
 > **Most users should leave these at their default values.** These control how the app talks to the Parts Unlimited server.
 
@@ -115,7 +159,7 @@ Every tracked, uninvoiced line item with full detail:
 
 ---
 
-## ❓ Troubleshooting
+## Troubleshooting
 
 **"Access Denied, This user is not authorized to use this app."**
 Your account is not on the authorized users list. Contact the app administrator to be added.
@@ -124,7 +168,13 @@ Your account is not on the authorized users list. Contact the app administrator 
 All shipped orders in your date range have been fully invoiced — that's a good thing! Try widening your date range if you expected to find something.
 
 **The app won't open / crashes immediately**
-Make sure you extracted the ZIP before running the `.exe`. Running directly from inside the ZIP file will not work.
+Make sure you extracted the ZIP before running the app. Running directly from inside the ZIP file will not work.
 
 **Windows says the file is dangerous**
 This is a SmartScreen warning for unsigned software. Click **More info → Run anyway** to proceed.
+
+**Mac says the app cannot be opened**
+Right-click → Open → Open again.
+
+**Mac permission error when saving file**
+Make sure you selected a save location using the **Browse…** button.
