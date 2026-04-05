@@ -72,7 +72,7 @@ If you do not do this, you may get a **permission error** when the app tries to 
 
 ---
 
-## 🖥️ Using the App
+## Using the App
 
 
 ### 1. Enter Your Credentials
